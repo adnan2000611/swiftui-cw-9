@@ -9,14 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List{
-            
-            movieRow(movieImage: "homealone", movieName: "Home Alone", movieChar: ["Macaulay Culkin", "Joe Pesci", "Daniel "])
-            movieRow(movieImage: "harrypotter", movieName: "Harry Potter", movieChar: ["Richard Harris", "Maggie Smith", "Ian Hart"])
-            movieRow(movieImage: "fast&furios", movieName: "Fast & Furios", movieChar: ["Paul Walker", "Vin Diesel", "Rick Yune"])
-            
+        NavigationView {
+            List{
+                NavigationLink(
+                    destination: MovieDetailView(movieName: "Home Alone", mainCharachters: ["Macaulay Culkin", "Joe Pesci", "Daniel "], movieImage: "homealone"),
+                    label: {
+                        movieRow(movieImage: "homealone", movieName: "Home Alone", movieChar: ["Macaulay Culkin", "Joe Pesci", "Daniel "])
+                    })
+                NavigationLink(
+                    destination: MovieDetailView(movieName: "Harry Potter", mainCharachters: ["Richard Harris", "Maggie Smith", "Ian Hart"], movieImage: "harrypotter"),
+                    label: {
+                movieRow(movieImage: "harrypotter", movieName: "Harry Potter", movieChar: ["Richard Harris", "Maggie Smith", "Ian Hart"])
+                    })
+                NavigationLink(
+                    destination: MovieDetailView(movieName: "Fast & Furios", mainCharachters: ["Paul Walker", "Vin Diesel", "Rick Yune"], movieImage: "fast&furios"),
+                    label: {
+                movieRow(movieImage: "fast&furios", movieName: "Fast & Furios", movieChar: ["Paul Walker", "Vin Diesel", "Rick Yune"])
+                    })
                 
-            
+                    
+                
+            }.navigationBarTitle("Movies")
         }
     }
 }
@@ -40,6 +53,6 @@ struct movieRow: View {
                     Text(movieChar.joined(separator: ", "))
                 
             }
-        }
+        }.frame(width: 390, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
     }
 }

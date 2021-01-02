@@ -11,6 +11,7 @@
 		04011983259BB10600E3842D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04011982259BB10600E3842D /* ContentView.swift */; };
 		04011985259BB10C00E3842D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04011984259BB10C00E3842D /* Assets.xcassets */; };
 		04011988259BB10C00E3842D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04011987259BB10C00E3842D /* Preview Assets.xcassets */; };
+		044A5BBF25A0DFF000A59C5B /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5BBE25A0DFF000A59C5B /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		04011984259BB10C00E3842D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04011987259BB10C00E3842D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04011989259BB10C00E3842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044A5BBE25A0DFF000A59C5B /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				04011980259BB10600E3842D /* MovieApp.swift */,
 				04011982259BB10600E3842D /* ContentView.swift */,
+				044A5BBE25A0DFF000A59C5B /* MovieDetailView.swift */,
 				04011984259BB10C00E3842D /* Assets.xcassets */,
 				04011989259BB10C00E3842D /* Info.plist */,
 				04011986259BB10C00E3842D /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044A5BBF25A0DFF000A59C5B /* MovieDetailView.swift in Sources */,
 				04011983259BB10600E3842D /* ContentView.swift in Sources */,
 				04011981259BB10600E3842D /* MovieApp.swift in Sources */,
 			);
