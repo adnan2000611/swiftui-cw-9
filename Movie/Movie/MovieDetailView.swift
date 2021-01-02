@@ -8,34 +8,33 @@
 import SwiftUI
 
 struct MovieDetailView: View {
-    var movieName : String
-    var mainCharachters : [String]
-    var movieImage : String
+    let movie : movie
     var body: some View {
         ZStack{
             Group{
-                Image(movieImage)
+                Image(movie.image)
                     .resizable()
                     .scaledToFill()
                     .blur(radius: 40)
                 Color.black.opacity(0.3)
             }.ignoresSafeArea()
             VStack(alignment: .center){
-                Image(movieImage).resizable().scaledToFit().clipShape(Circle())
+                Image(movie.image).resizable().scaledToFit().clipShape(Circle())
                     .frame(width: 300 )
                     .overlay(Circle().stroke(Color.white, lineWidth: 6))
                 
-                Text(movieName).font(.system(size: 50)).bold()
+                Text(movie.name).font(.system(size: 50)).bold()
                 
-                Text(mainCharachters.joined(separator: ", ")).font(.title)
+                Text(movie.characters.joined(separator: ", ")).font(.title)
                 Spacer()
             }.foregroundColor(.white).frame(width: 400).padding()
         }
     }
 }
 
-struct MovieDetailView_Previews: PreviewProvider {
+/*struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(movieName: "dhsg", mainCharachters: ["jjsj", "sagjs"], movieImage: "harrypotter")
+        MovieDetailView()
     }
 }
+*/

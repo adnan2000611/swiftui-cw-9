@@ -12,6 +12,7 @@
 		04011985259BB10C00E3842D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04011984259BB10C00E3842D /* Assets.xcassets */; };
 		04011988259BB10C00E3842D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04011987259BB10C00E3842D /* Preview Assets.xcassets */; };
 		044A5BBF25A0DFF000A59C5B /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5BBE25A0DFF000A59C5B /* MovieDetailView.swift */; };
+		044A5BC325A0F8A200A59C5B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A5BC225A0F8A200A59C5B /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		04011987259BB10C00E3842D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04011989259BB10C00E3842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044A5BBE25A0DFF000A59C5B /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		044A5BC225A0F8A200A59C5B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		0401197F259BB10600E3842D /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				044A5BC125A0F88200A59C5B /* Models */,
 				04011980259BB10600E3842D /* MovieApp.swift */,
 				04011982259BB10600E3842D /* ContentView.swift */,
 				044A5BBE25A0DFF000A59C5B /* MovieDetailView.swift */,
@@ -70,6 +73,14 @@
 				04011987259BB10C00E3842D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		044A5BC125A0F88200A59C5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				044A5BC225A0F8A200A59C5B /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				044A5BBF25A0DFF000A59C5B /* MovieDetailView.swift in Sources */,
 				04011983259BB10600E3842D /* ContentView.swift in Sources */,
+				044A5BC325A0F8A200A59C5B /* Movie.swift in Sources */,
 				04011981259BB10600E3842D /* MovieApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

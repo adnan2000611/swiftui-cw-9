@@ -10,22 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List{
+            List(movies){ movie in
                 NavigationLink(
-                    destination: MovieDetailView(movieName: "Home Alone", mainCharachters: ["Macaulay Culkin", "Joe Pesci", "Daniel "], movieImage: "homealone"),
+                    destination: MovieDetailView(movie: movie),
                     label: {
-                        movieRow(movieImage: "homealone", movieName: "Home Alone", movieChar: ["Macaulay Culkin", "Joe Pesci", "Daniel "])
+                        movieRow(movie: movie)
                     })
-                NavigationLink(
-                    destination: MovieDetailView(movieName: "Harry Potter", mainCharachters: ["Richard Harris", "Maggie Smith", "Ian Hart"], movieImage: "harrypotter"),
-                    label: {
-                movieRow(movieImage: "harrypotter", movieName: "Harry Potter", movieChar: ["Richard Harris", "Maggie Smith", "Ian Hart"])
-                    })
-                NavigationLink(
-                    destination: MovieDetailView(movieName: "Fast & Furios", mainCharachters: ["Paul Walker", "Vin Diesel", "Rick Yune"], movieImage: "fast&furios"),
-                    label: {
-                movieRow(movieImage: "fast&furios", movieName: "Fast & Furios", movieChar: ["Paul Walker", "Vin Diesel", "Rick Yune"])
-                    })
+                
                 
                     
                 
@@ -41,16 +32,14 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct movieRow: View {
-    let movieImage : String
-    let movieName : String
-    let movieChar : [String]
+    let movie : movie
     
     var body: some View {
         HStack{
-            Image(movieImage).resizable().aspectRatio(contentMode: .fit).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).clipShape(Circle())
+            Image(movie.image).resizable().aspectRatio(contentMode: .fit).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).clipShape(Circle())
             VStack{
-                Text(movieName).font(.largeTitle)
-                    Text(movieChar.joined(separator: ", "))
+                Text(movie.name).font(.largeTitle)
+                Text(movie.characters.joined(separator: ", "))
                 
             }
         }.frame(width: 390, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
